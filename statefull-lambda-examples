@@ -65,6 +65,12 @@ void test3() {
     };
     l();
     std::cout << x << std::endl;
+    l();
+    std::cout << x << std::endl;
+    l();
+    std::cout << x << std::endl;
+    l();
+    std::cout << x << std::endl;
 }
 
 int main()
@@ -72,7 +78,6 @@ int main()
     test1();
     test2();
     test3();
-
     return 0;
 }
 
