@@ -45,6 +45,15 @@ void test2() {
         std::cout << x << std::endl;
     };
     l1();
+    std::cout << x << std::endl;
+    l1();
+    std::cout << x << std::endl;
+    l1();
+    std::cout << x << std::endl;
+    l1();
+    std::cout << x << std::endl;
+    l1();
+    std::cout << x << std::endl;
 }
 
 int main()
