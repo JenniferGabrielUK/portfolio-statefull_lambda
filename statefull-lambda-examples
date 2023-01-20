@@ -56,10 +56,22 @@ void test2() {
     std::cout << x << std::endl;
 }
 
+void test3() {
+   std::cout << "\nTet3======================" << std::endl;
+    int x{ 100 };
+    auto l = [&x]() mutable {
+        x += 100;
+        std::cout << x << std::endl;
+    };
+    l();
+    std::cout << x << std::endl;
+}
+
 int main()
 {
     test1();
     test2();
+    test3();
 
     return 0;
 }
