@@ -23,10 +23,20 @@ void test1() {
     l1();
 }
 
+void test2() {
+    std::cout << "\nTest2====================" << std::endl;
+    int x{ 100 };
+    auto l = [x]() mutable {
+        x += 100;
+        std::cout << x << std::endl;
+    };
+    l();
+}
 
 int main()
 {
     test1();
+    test2();
 
     return 0;
 }
