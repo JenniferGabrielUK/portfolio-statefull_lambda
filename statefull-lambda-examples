@@ -40,6 +40,11 @@ void test2() {
     std::cout << x << std::endl;
     l();
     std::cout << x << std::endl;
+    auto l1 = [x]() mutable {
+        x *= 10;
+        std::cout << x << std::endl;
+    };
+    l1();
 }
 
 int main()
