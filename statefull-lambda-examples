@@ -110,7 +110,7 @@ void test5() {
     int x{ 100 };
     int y{ 200 };
     int z{ 300 };
-    std::cout << "\nLocal Varaibles before lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables before lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
@@ -125,7 +125,7 @@ void test5() {
         std::cout << z << std::endl;
     };
     l();
-    std::cout << "\nLocal Varaibles have now changed due to lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables have now changed due to lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
@@ -137,7 +137,7 @@ void test6() {
     int x{ 100 };
     int y{ 200 };
     int z{ 300 };
-    std::cout << "\nLocal Varaibles before lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables before lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
@@ -153,7 +153,7 @@ void test6() {
         std::cout << z << std::endl;
     };
     l();
-    std::cout << "\nLocal Varaibles have now changed due to lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables have now changed due to lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
@@ -165,7 +165,7 @@ void test7() {
     int x{ 100 };
     int y{ 200 };
     int z{ 300 };
-    std::cout << "\nLocal Varaibles before lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables before lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
@@ -181,7 +181,7 @@ void test7() {
         std::cout << z << std::endl;
     };
     l();
-    std::cout << "\nLocal Varaibles have now changed due to lambda capture by reference." << std::endl;
+    std::cout << "\nLocal variables have now changed due to lambda capture by reference." << std::endl;
     std::cout << "\n";
     std::cout << x << std::endl;
     std::cout << y << std::endl;
