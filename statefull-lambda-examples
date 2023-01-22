@@ -188,6 +188,32 @@ void test7() {
     std::cout << z << std::endl;
 }
 
+class Person {
+    friend std::ostream& operator << (std::ostream& os, const Person& rhs);
+private:
+    std::string name{};
+    int age{};
+public:
+    Person() = default;
+    Person(std::string name = "Default", int age = 0) : name{ name }, age{ age } {}
+    Person(const Person& p) = default;
+    ~Person() = default;
+    std::string get_name() const { return name; }
+    void set_name(std::string name) { this->name = name; }
+    int get_age() const { return age; }
+    void set_age(int age) { age = age; }
+
+    auto change_person1() { return[this](std::string new_name, int new_age) {name = new_name, age = new_age; }; }
+    auto change_person2() { return[=](std::string new_name, int new_age) {name = new_name, age = new_age; }; }
+    auto change_person3() { return[&](std::string new_name, int new_age) {name = new_name, age = new_age; }; }
+
+};
+
+std::ostream &operator << (std::ostream& os, const Person& rhs) {
+        os << "[Person: " << rhs.name << ": " << rhs.age << ".]";
+        return os;
+}
+
 int main()
 {
     test1();
