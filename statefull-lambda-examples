@@ -78,7 +78,7 @@ void test4() {
     int x{ 100 };
     int y{ 200 };
     int z{ 300 };
-    auto l = [=]() mutable {
+    auto l = [=]() mutable { //may cause a compiler warning as not all variables are used in the lambda body, visual studio 2021 however does not produce any warnings.
         x += 100;
         y += 100;
         std::cout << x << std::endl;
