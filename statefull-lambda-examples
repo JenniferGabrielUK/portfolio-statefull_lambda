@@ -214,6 +214,22 @@ std::ostream &operator << (std::ostream& os, const Person& rhs) {
         return os;
 }
 
+void test8() {
+    std::cout << "\nTest8=============================" << std::endl;
+    Person person1("Jenny", 19);
+    std::cout << person1 << std::endl;
+   //Defualt capture [this]
+    auto change_person1 = person1.change_person1();
+    change_person1("Jennifer", 21);
+    std::cout << person1 << std::endl;
+    auto change_person2 = person1.change_person2();
+    change_person2("Elizabeth", 19);
+    std::cout << person1 << std::endl;
+    auto change_person3 = person1.change_person3();
+    change_person3("Gabriel", 21);
+    std::cout << person1 << std::endl;
+}
+
 int main()
 {
     test1();
@@ -223,6 +239,7 @@ int main()
     test5();
     test6();
     test7();
+    test8();
     return 0;
 }
 
