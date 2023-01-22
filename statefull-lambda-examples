@@ -73,11 +73,30 @@ void test3() {
     std::cout << x << std::endl;
 }
 
+void test4() {
+    std::cout << "\nTest4======================" << std::endl;
+    int x{ 100 };
+    int y{ 200 };
+    int z{ 300 };
+    auto l = [=]() mutable {
+        x += 100;
+        y += 100;
+        std::cout << x << std::endl;
+        std::cout << y << std::endl;
+    };
+    l();
+    std::cout << "\n";
+    std::cout << x << std::endl;
+    std::cout << y << std::endl;
+    std::cout << z << std::endl;
+}
+
 int main()
 {
     test1();
     test2();
     test3();
+    test4();
     return 0;
 }
 
