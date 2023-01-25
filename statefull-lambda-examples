@@ -244,6 +244,10 @@ public:
 void test9() {
 	std::cout << "\nTest 9=================" << std::endl;
 	int y(100);
+	Lambda lambda1(y);
+	auto lambda2 = [y](int x) {std::cout << x + y << std::endl; };
+	lambda1(200);
+	lambda2(200);
 }
 
 int main()
