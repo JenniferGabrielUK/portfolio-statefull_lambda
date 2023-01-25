@@ -251,6 +251,9 @@ void test9() {
 	auto lambda2 = [y](int x) {std::cout << x + y << std::endl; };
 	lambda1(200);
 	lambda2(200);
+	int z(100.1);
+	Lambda lambda3(z);
+	lambda3(200.2);
 }
 
 int main()
