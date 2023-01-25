@@ -230,6 +230,22 @@ void test8() {
     std::cout << person1 << std::endl;
 }
 
+class Lambda {
+private:
+	int y{};
+public:
+	Lambda(int y) : y{ y } {};
+
+	void operator() (int x) const {
+		std::cout << x + y << std::endl;
+	};
+};
+
+void test9() {
+	std::cout << "\nTest 9=================" << std::endl;
+	int y(100);
+}
+
 int main()
 {
     test1();
@@ -240,6 +256,7 @@ int main()
     test6();
     test7();
     test8();
+    test9();        
     return 0;
 }
 
